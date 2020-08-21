@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Section 16 Databases (Firebase)</title>
+    <style>
+        .container{
+          max-width: 400px;
+        }
+      </style>
+</head>
+<body>
+
+    <div class="container my-5">
+        <h2>Recipes</h2>
+        <ul>
+          
+        </ul>
+        <form>
+          <label for="recipe">Add a new recipe:</label>
+          <div class="input-group">
+            <input type="text" class="form-control" id="recipe" required>
+            <div class="input-group-append">
+              <input type="submit" value="add" class="btn btn-outline-secondary">
+            </div>
+          </div>
+        </form>
+        <button>ubsubscribbed from changes</button>
+      </div>
+
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDEG-jGh3CoylXy2TZC31_zV2MB9x3WGWQ",
+    authDomain: "udemy-modern-javascript-e4bb8.firebaseapp.com",
+    databaseURL: "https://udemy-modern-javascript-e4bb8.firebaseio.com",
+    projectId: "udemy-modern-javascript-e4bb8",
+    storageBucket: "udemy-modern-javascript-e4bb8.appspot.com",
+    messagingSenderId: "992307017693",
+    appId: "1:992307017693:web:532b1b5cba6eb597262834",
+    measurementId: "G-BRJS2ZFLBQ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+  firebase.analytics();
+</script>
+<script src="realTimeListeners.js"></script>
+</body>
+</html>
